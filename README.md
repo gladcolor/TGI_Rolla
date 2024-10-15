@@ -1,1 +1,1 @@
-URL: https://gladcolor/github.io/TGI_Rolla
+URL: gladcolor/github.io/TGI_Rolla
