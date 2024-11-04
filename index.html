@@ -211,6 +211,10 @@
                       label: "Height",
                     },
                     {
+                      fieldName: "category",
+                      label: "Category",
+                    },
+                    {
                       fieldName: "type",
                       label: "Type",
                     },
@@ -309,7 +313,8 @@
           function getValueExpression(windSpeed, retrofitStrategy) {
             const currentThresholds = thresholds[`strategy${retrofitStrategy}`];
             return `
-              var buildingType = $feature.type;
+              var buildingType = $feature.category_c;
+              //console.log("buildingType:", buildingType)
               var thresholdsForType = ${JSON.stringify(currentThresholds)}[buildingType];
               var ds = 0;
       
