@@ -16,6 +16,8 @@
         margin: 0;
         height: 100%;
         width: 100%;
+        display: flex;
+        flex-direction: column;
       }
 
       #headerPanel {
@@ -34,9 +36,9 @@
       }
 
       #viewDiv {
-        position: absolute;
-        top: 60px;
-        bottom: 0;
+        position: relative;
+        flex: 1; /* Takes up remaining vertical space */ 
+        margin-top: 60px; /* Offset to prevent overlapping with header */
         width: 100%;
       }
 
@@ -207,9 +209,29 @@
                   type: "fields",
                   fieldInfos: [
                     {
-                      fieldName: "height",
-                      label: "Height",
+                      fieldName: "bldgtype",
+                      label: "Meterial",
                     },
+                    {
+                      fieldName: "num_story",
+                      label: "Story",
+                    },
+                    {
+                      fieldName: "family_num",
+                      label: "Occupancy",
+                    },    
+                    {
+                      fieldName: "prediction",
+                      label: "Roof",
+                    },  
+                    {
+                      fieldName: "occtype",
+                      label: "NSI occtype",
+                    },                           
+                    {
+                      fieldName: "fd_id",
+                      label: "Building ID",
+                    },                                 
                   ],
                 },
               ],
